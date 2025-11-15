@@ -1,7 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import LinkedInicon from "../components/icons/linkedin.astro"
+import LinkedInicon from "../components/icons/Linkedin.astro"
+import Githubicon from "../components/icons/Github.astro"
+import Mailicon from "../components/icons/Mail.astro"
+import SocialPill from "../components/SocialPill.astro";
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -29,16 +33,31 @@ import LinkedInicon from "../components/icons/linkedin.astro"
           </div>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
-        <span class="text-yellow-200/90">+12 Años de experiencia.</span> <span class="text-blue-200/90">Diseñador y Desarrollador Web.</span> 
-        <span class="text-red-200/90">De Popayán, Colombia.</span>
+      <h2 class="text-2xl text-wrap pb-2">0
+        <span class="text-yellow-200/90">+12 Años de experiencia.</span> <span class="text-blue-200/90">Diseñador y Desarrollador Web.<br></span> 
+        <span class="text-amber-50">de Popayán, Colombia.</span>
          <span class="opacity-75">Especializado en crear Webs y Aplicaciones únicas.</span>
       </h2>
-      <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/dcaeben/" target="_blank" rel="noopener"><LinkedInicon class="w-6 h-6"/>LinkedIn</a>
-        </li>
-      </ul>
+     
+        <nav class="flex gap-x-2">
+
+          <SocialPill href="https://www.linkedin.com/in/dcaeben/">
+            <LinkedInicon class="w-6 h-6"/>
+            LinkedIn
+          </SocialPill>
+
+            <SocialPill href="https://www.linkedin.com/in/dcaeben/">
+            <Githubicon class="w-6 h-6"/>
+            GitHub
+          </SocialPill>
+
+             <SocialPill href="https://www.linkedin.com/in/dcaeben/">
+            <Mailicon class="w-6 h-6"/>
+            Email
+          </SocialPill>
+           
+        </nav>
+      
     </section>
   </main>
 </Layout>
