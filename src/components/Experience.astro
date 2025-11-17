@@ -1,0 +1,49 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro';
+
+const EXPERIENCE = [
+    {
+        date: 'December 2024 - Actually',
+        title: 'WebMaster Anabella Group - Miami',
+        description:
+        'As a webmaster, I bring websites to life and ensure they are fast, secure, and visually appealing for users. I handle design, maintenance, and optimization, combining creativity with technical expertise to deliver flawless digital experiences. From content management to implementing new technologies, my job is to keep each page at its best, adapting it to the needs of the business and the expectations of the user.',
+        link: 'href="#"'
+    },
+
+    {
+        date: 'March 2023 - Actually',
+        title: 'WebMaster Entrance Properties - Spain',
+        description:
+        'As a leader in web design and development within the company, I have successfully driven the completion of every proposed project, exceeding expectations and raising the quality standard with each delivery. Working closely with a multicultural team, I have built strong relationships and contributed to collective success through clear and effective communication.',
+        link: 'href="#"'
+    },
+    {
+        date: 'January 2022 - 2023',
+        title: 'Mafla Group Colombia',
+        description:
+        'Development of web solutions using HTML, CSS, JavaScript, content management systems like WordPress, and integration with all types of plugins, online stores, SEO, and analytics.',
+        link: 'href="#"'
+    }
+]
+---
+
+
+
+<ol class="relative border-s border-default">   
+
+    {
+        EXPERIENCE.map(experience => (
+
+        <li class="mb-10 ms-4">
+
+        <ExperienceItem {...experience} />
+        
+        </li>
+
+        ))
+    }
+    
+</ol>
+
+
+
