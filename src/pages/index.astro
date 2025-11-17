@@ -1,22 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import LinkedInicon from "../components/icons/Linkedin.astro"
-import Githubicon from "../components/icons/Github.astro"
-import Mailicon from "../components/icons/Mail.astro"
+
+import LinkedInicon from "../components/icons/Linkedin.astro";
+import Githubicon from "../components/icons/Github.astro";
+import Mailicon from "../components/icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<Layout 
+title="Porfolio de Daniel - Desarrollador, Programador y Diseñador Web con 15 años de experiencia"
+description="Soluciones digitales eficientes, atractivas y orientadas a resultados. A lo largo de mi carrera he trabajado en el diseño, desarrollo e implementación de aplicaciones web, sitios corporativos y productos digitales, combinando una sólida base técnica con una visión estratégica del diseño y la experiencia de usuario."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionContainer class="py-44 pb-25">
 
       <img
-        class="rounded-full w-15 h-15 mb-4"
+        class="rounded-full size-15 mb-4"
         src="/DANIEL2.png"
         alt="daniel photo"
       />
@@ -33,31 +40,43 @@ import SocialPill from "../components/SocialPill.astro";
           </div>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap pb-2">0
-        <span class="text-yellow-200/90">+12 Años de experiencia.</span> <span class="text-blue-200/90">Diseñador y Desarrollador Web.<br></span> 
+      <h2 class="text-2xl text-wrap pb-2">
+        <span class="text-yellow-200/90">+14 Años de experiencia.</span> <span class="text-blue-200/90">Diseñador y Desarrollador Web.<br></span> 
         <span class="text-amber-50">de Popayán, Colombia.</span>
          <span class="opacity-75">Especializado en crear Webs y Aplicaciones únicas.</span>
       </h2>
      
-        <nav class="flex gap-x-2">
+        <nav class="flex gap-x-4 mt-5">
 
           <SocialPill href="https://www.linkedin.com/in/dcaeben/">
             <LinkedInicon class="w-6 h-6"/>
             LinkedIn
           </SocialPill>
 
-            <SocialPill href="https://www.linkedin.com/in/dcaeben/">
+            <SocialPill href="https://github.com/daniel-webcode">
             <Githubicon class="w-6 h-6"/>
             GitHub
           </SocialPill>
 
-             <SocialPill href="https://www.linkedin.com/in/dcaeben/">
+             <SocialPill href="mailto:daniel@dcmdev.com">
             <Mailicon class="w-6 h-6"/>
-            Email
+            daniel@dcmdev.com
           </SocialPill>
            
         </nav>
       
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+
+      <h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center">
+        <Briefcase class="size-6 "/>
+        Work Experience
+      </h2>
+      <Experience />
+
+    </SectionContainer>
+
+
   </main>
 </Layout>
