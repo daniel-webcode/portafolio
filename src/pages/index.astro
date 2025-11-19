@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-
 import LinkedInicon from "../components/icons/Linkedin.astro";
 import Githubicon from "../components/icons/Github.astro";
 import Mailicon from "../components/icons/Mail.astro";
+import Codeicon from "../components/icons/Code.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Projects from "../components/Projects.astro"
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -19,8 +20,8 @@ import Briefcase from "../components/icons/Briefcase.astro";
 title="Porfolio de Daniel - Desarrollador, Programador y Diseñador Web con 15 años de experiencia"
 description="Soluciones digitales eficientes, atractivas y orientadas a resultados. A lo largo de mi carrera he trabajado en el diseño, desarrollo e implementación de aplicaciones web, sitios corporativos y productos digitales, combinando una sólida base técnica con una visión estratégica del diseño y la experiencia de usuario."
 >
-  <main>
-    <SectionContainer class="py-44 pb-25">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
 
       <img
         class="rounded-full size-15 mb-4"
@@ -28,38 +29,38 @@ description="Soluciones digitales eficientes, atractivas y orientadas a resultad
         alt="daniel photo"
       />
 
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hey, Soy Daniel
+      <h1 class="text-white text-4xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-8">
+        Hi, I’m Daniel.
         <a
           href="https://www.linkedin.com/in/dcaeben/"
           target="_blank"
           rel="noopener"
         >
           <div class="flex justify-center items-center">
-            <Badge>Disponible para trabajar</Badge>
+            <Badge>Available to work.</Badge>
           </div>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap pb-2">
-        <span class="text-yellow-200/90">+14 Años de experiencia.</span> <span class="text-blue-200/90">Diseñador y Desarrollador Web.<br></span> 
-        <span class="text-amber-50">de Popayán, Colombia.</span>
-         <span class="opacity-75">Especializado en crear Webs y Aplicaciones únicas.</span>
+      <h2 class="text-2xl text-pretty pb-2 max-w-[700px]:">
+        <span class="text-yellow-200/90">+14 years of experience.</span> <span class="text-blue-200/90">Web Designer and Developer.</span> 
+        <span class="text-amber-50">from Popayán, Colombia.</span>
+         <span class="opacity-75">Specialized in creating unique websites and applications.</span>
       </h2>
      
-        <nav class="flex gap-x-4 mt-5">
+        <nav class="flex gap-4 mt-5 flex-wrap">
 
           <SocialPill href="https://www.linkedin.com/in/dcaeben/">
-            <LinkedInicon class="w-6 h-6"/>
+            <LinkedInicon class="size-4 md:size-6"/>
             LinkedIn
           </SocialPill>
 
             <SocialPill href="https://github.com/daniel-webcode">
-            <Githubicon class="w-6 h-6"/>
+            <Githubicon class="size-4 md:size-6"/>
             GitHub
           </SocialPill>
 
              <SocialPill href="mailto:daniel@dcmdev.com">
-            <Mailicon class="w-6 h-6"/>
+            <Mailicon class="size-4 md:size-6"/>
             daniel@dcmdev.com
           </SocialPill>
            
@@ -69,11 +70,21 @@ description="Soluciones digitales eficientes, atractivas y orientadas a resultad
 
     <SectionContainer id="experience">
 
-      <h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center">
-        <Briefcase class="size-6 "/>
+      <h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center">
+        <Briefcase class="size-8 "/>
         Work Experience
       </h2>
       <Experience />
+
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+
+      <h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center">
+        <Codeicon class="size-10 "/>
+        Projects
+      </h2>
+      <Projects />
 
     </SectionContainer>
 
