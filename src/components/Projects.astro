@@ -1,27 +1,92 @@
 ---
+import Wordpress from '../components/icons/Wordpress.astro'
+import Elementor from '../components/icons/Elementor.astro'
+import Html from '../components/icons/Html.astro'
+import Css from '../components/icons/Css.astro'
+import Javascript from '../components/icons/Javascript.astro'
+import Php from '../components/icons/Php.astro'
+
+const TAGS = {
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-[#14215a] text-white",
+    icon: Wordpress,
+  },
+
+  ELEMENTOR: {
+    name: "Elementor",
+    class: "bg-white text-white",
+    icon: Elementor,
+  },
+
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: Html,
+  },
+
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: Css,
+  },
+
+  JS: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: Javascript,
+  },
+
+  PHP: {
+    name: "PHP",
+    class: "bg-black text-white",
+    icon: Php,
+  },
+};
+
 const PROJECTS = [
-    {
-        title: 'Project 1',
-        description: 'As a leader in web design and development within the company, I have successfully driven the completion of every proposed project, exceeding expectations and raising the quality standard with each delivery. Working closely with a multicultural team, I have built strong relationships and contributed to collective success through clear and effective communication.',
-        link:'#',
-        github: '#',
-        image: '/projects/anabella.webp',
-        tags: ['HTML','CSS','JavaScript','PHP','Wordpress','Elementor']
-    }
-]
+  {
+    title: "Anabella Group (Miami)",
+    description:
+      "In the “Projects” section, the website showcases a diverse portfolio of new developments (pre-construction), including luxury residences such as Waldorf Astoria, Aston Martin, and The Perigon, among others.",
+    link: "https://anabellagroup.com/proyectos/",
+    github: "#",
+    image: "/projects/anabella.webp",
+    tags: [
+      TAGS.WORDPRESS,
+      TAGS.ELEMENTOR,
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JS,
+      TAGS.PHP
+    ],
+  },
+];
 ---
 
 {
-    PROJECTS.map(project => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
-            <p class="text-lg mb-2 text-pretty">{project.description}</p>
-            <ul>
-                {project.tags.map(tag=> (
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img class="rounded shadow-2xl shadow-white/10"   src={project.image} alt={`Image of Project ${project.image}`}/>
-        </article>
-    ))
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs text-amber-50 ${tag.class} py-2 px-3 `}>
+            <tag.icon class="size-4" />
+            {tag.name}
+            </span>
+
+            </li>
+        ))}
+
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Image of Project ${image}`}
+      />
+    </article>
+  ))
 }
